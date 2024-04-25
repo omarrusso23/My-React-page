@@ -7,11 +7,12 @@ const App = () => {
   return (
     <div className="App">
       <header>
+        <Navbar></Navbar>
       </header>
-      <section class="section1">
+      <section className="body">
         <Body></Body>
       </section>
-      <section class="section2">
+      <section className="footer">
         <Footer></Footer>
       </section>
     </div>
