@@ -1,0 +1,129 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overall Container */
+.bodyInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color); /* Ensure you define this in your global CSS or variables */
+  padding: 0 1rem; /* Add padding for better responsiveness */
+}
+
+/* Container for Intro and Image */
+.introContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  scale: 0.8;
+  transition: width 0.3s ease; /* Smooth transition for container width */
+}
+
+/* Intro Text Styling */
+.bodyIntro {
+  max-width: 60%;
+  margin-right: 2rem;
+  padding: 0 2rem;
+}
+
+.bodyIntro.fullWidth {
+  max-width: 90%; /* Make text container take 90% of the width */
+  margin-right: 0; /* Remove margin to align properly */
+}
+
+/* Text Styling */
+.infoTitle {
+  font-size: 4rem; /* Adjusted font size for better readability */
+}
+
+.infoSubtitle {
+  font-size: 2.5rem; /* Adjusted font size */
+}
+
+.infoText {
+  font-size: 1.5rem; /* Adjusted font size */
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: var(--text-highlight-color); /* Define this variable in your global CSS or variables */
+}
+
+/* Contact Button Styling */
+.contactButtonInfo {
+  display: inline-block;
+  background: var(--text-highlight-color);
+  border: none;
+  height: 3rem;
+  width: 10rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.contactButtonInfo:hover {
+  background: var(--background-color); /* Ensure you define this variable */
+  color: var(--text-highlight-color);
+  box-shadow: 0 0 10px rgba(255, 41, 109, 0.4);
+}
+
+/* Image Styling */
+.bodyImg {
+  clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+  transition: opacity 0.3s ease; /* Smooth transition for hiding the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bodyIntro {
+    font-size: 1.5rem;
+  }
+
+  .infoTitle {
+    font-size: 2.5rem;
+  }
+
+  .infoSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .infoText {
+    font-size: 1rem;
+  }
+
+  .contactButtonInfo {
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1rem;
+  }
+
+  .bodyImg {
+    display: none; /* Hide the image on small screens */
+  }
+
+  .introContainer {
+    flex-direction: column; /* Stack text and image vertically */
+    width: 100%;
+  }
+
+  .bodyIntro.fullWidth {
+    max-width: 90%; /* Make text container take 90% of the width */
+    margin-right: 0;
+  }
+}

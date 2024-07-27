@@ -1,19 +1,22 @@
-import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import Body from "./Components/Body/Body";
-import Footer from "./Components/Footer/Footer";
+import React, { useState } from 'react';
+import './App.css';
+import Info from './Components/Body/Info/info';
+import Languages from './Components/Body/Languages/Languages';
+import WorkInProgress from './Components/WorkInProgress';
 
 const App = () => {
+  const [isWorkInProgressVisible, setWorkInProgressVisible] = useState(true);
+
+  const handleDismiss = () => {
+    setWorkInProgressVisible(false);
+  };
+
   return (
     <div className="App">
-      <header>
-        <Navbar></Navbar>
-      </header>
       <section className="body">
-        <Body></Body>
-      </section>
-      <section className="footer">
-        <Footer></Footer>
+        <Info />
+        <Languages />
+        {isWorkInProgressVisible && <WorkInProgress onDismiss={handleDismiss} />}
       </section>
     </div>
   );
