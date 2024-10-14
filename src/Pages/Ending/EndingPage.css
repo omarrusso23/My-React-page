@@ -1,0 +1,67 @@
+.ending-page {
+    padding: 2rem; /* Add padding to the page */
+    background-color: #121212; /* Background color */
+    color: #eaeaea; /* Text color */
+    text-align: center; /* Center text */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Ensure minimum height is 100vh */
+    font-family: 'Orbitron', sans-serif; /* Set font family */
+    width: 100%;
+  }
+  
+  .ending-header {
+    font-size: 3rem; /* Header size */
+    margin-bottom: 1rem; /* Space below header */
+  }
+  
+  .ending-message {
+    font-size: 1.2rem; /* Message size */
+    margin-bottom: 2rem; /* Space below message */
+  }
+  
+  .ending-links {
+    display: flex; /* Flex container for links */
+    gap: 2rem; /* Space between links */
+  }
+  
+  .ending-link {
+    padding: 0.5rem 1rem; /* Padding for links */
+    background-color: #0ff1ce; /* Link background color */
+    color: #121212; /* Link text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth background transition */
+  }
+  
+  .ending-link:hover {
+    background-color: #0099ff; /* Change color on hover */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .ending-header {
+      font-size: 2.5rem; /* Smaller header on mobile */
+    }
+  
+    .ending-message {
+      font-size: 1rem; /* Smaller message on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ending-header {
+      font-size: 2rem; /* Even smaller header on smaller devices */
+    }
+  
+    .ending-message {
+      font-size: 0.9rem; /* Even smaller message on smaller devices */
+    }
+  
+    .ending-link {
+      padding: 0.5rem; /* Smaller padding on mobile */
+    }
+  }
+  

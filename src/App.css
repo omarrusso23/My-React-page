@@ -1,16 +1,74 @@
-body {
-    background: var(--background-color);
-    color: #D1F9FF;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box !important;
-    height: 100%;
-    overflow-x:hidden;
+/* Full-screen sections with scroll snapping */
+.App > div {
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    scroll-snap-align: start; /* Snap at the start of the section */
+    scroll-snap-stop: always; /* Ensure it snaps completely */
 }
 
-.themeButton {
+/* Individual sections */
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Scroll snap behavior */
+body {
+    margin: 0;
+    scroll-snap-type: y proximity; /* Switch to proximity for smoother snapping */
+    scroll-behavior: smooth;
+}
+
+/* Sidebar Navigation with Glassmorphism */
+.sidebar {
     position: fixed;
-    bottom: 20px;
-    left: 20px;  
-    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 100vh; /* Full height of the viewport */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding-top: 20px;
+    z-index: 1000; /* Make sure it's above everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Sidebar links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 20px 0;
+    cursor: pointer;
+    color: white; /* Text color */
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.sidebar li:hover {
+    color: #ff4e00; /* Highlight color on hover */
+}
+
+/* Ensure body has no margin and overflow settings */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }

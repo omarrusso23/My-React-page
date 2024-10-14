@@ -1,0 +1,159 @@
+/* Import Google Font for modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif; /* Apply the new font globally */
+  margin: 0; /* Remove default margin */
+  background-color: #121212; /* Set a consistent dark background */
+}
+
+.landing-page {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  height: 100%; 
+  background: linear-gradient(135deg, #1e1e1e, #121212); /* Gradient background */
+  color: #eaeaea; 
+  text-align: left; 
+  animation: fadeIn 1s; 
+  padding: 0 5%; /* More padding for larger screens */
+  width: 100%;
+}
+
+.text-container {
+  flex: 1; 
+}
+
+.image-container {
+  flex: 1; 
+  display: flex; 
+  justify-content: center; 
+}
+
+/* Hide image on smaller screens */
+@media (max-width: 768px) {
+  .image-container {
+    display: none; 
+  }
+
+  .landing-page {
+    flex-direction: column; 
+    align-items: center; 
+    padding: 2rem; 
+  }
+
+  .text-container {
+    text-align: center; 
+  }
+}
+
+.profile-image {
+  width: 180px; /* Adjust size */
+  height: 180px; /* Adjust size */
+  border-radius: 50%; /* Make image circular */
+  object-fit: cover; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for image */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 480px) {
+  .landing-title {
+    font-size: 3rem; 
+  }
+
+  .landing-subtitle {
+    font-size: 2rem; 
+  }
+
+  .description {
+    font-size: 1rem; 
+    padding: 0 1rem; 
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem; 
+  }
+}
+
+/* General styles */
+.landing-title {
+  font-size: 4rem; /* Larger title */
+  font-weight: 700; /* Bold weight */
+  animation: slideIn 1s; 
+}
+
+.landing-subtitle {
+  font-size: 2.5rem; 
+  margin: 0.5rem 0; 
+  font-weight: 500; /* Medium weight */
+}
+
+.description {
+  font-size: 1.2rem; 
+  max-width: 600px; 
+  margin: 1rem 0; 
+  font-weight: 400; /* Regular weight */
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #a31619; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  transition: background-color 0.3s, transform 0.3s; 
+  font-weight: 500; /* Medium weight */
+}
+
+.cta-button:hover {
+  background-color: #8c1416; /* Darker shade on hover */
+  transform: scale(1.05); 
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scroll-indicator {
+  position: absolute; /* Position it absolutely */
+  bottom: 20px; /* Adjust bottom distance */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust centering */
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  color: #eaeaea; /* Text color */
+  font-size: 1.2rem; /* Font size */
+}
+
+.arrow {
+  font-size: 2rem; /* Size of the arrow */
+  margin-right: 0.5rem; /* Space between arrow and text */
+  color: rgba(234, 234, 234, 0.3); /* Lighter arrow color for a subtle effect */
+  position: relative; /* Relative positioning */
+  top: 2px; /* Adjust vertical position to align with text */
+}
+
+/* Optional: Add hover effect for the text */
+.scroll-indicator span:hover {
+  color: #a31619; /* Change text color on hover */
+  cursor: pointer; /* Change cursor on hover */
+}

@@ -1,0 +1,108 @@
+.project-page {
+  padding: 2rem; /* Add padding to the page */
+  background-color: #a72121; /* Background color */
+  color: #eaeaea; /* Text color */
+  text-align: center; /* Center text */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  height: auto; /* Allow height to adjust */
+  height: 100%; /* Ensure minimum height of 100vh */
+  width: 100%;
+}
+
+.project-header {
+  font-size: 3rem; /* Header size */
+  margin-bottom: 2rem; /* Space below header */
+}
+
+/* Other styles remain unchanged */
+
+
+.project-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Space between cards */
+  justify-content: center; /* Center the grid items */
+  max-width: 1200px; /* Optional: Limit maximum width of the grid */
+  width: 100%; /* Full width */
+}
+
+.project-card {
+  background-color: #1e1e1e; /* Card background color */
+  padding: 1.5rem; /* Inner padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  transition: transform 0.2s; /* Smooth transition */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.project-title {
+  font-size: 1.5rem; /* Title size */
+  margin-bottom: 0.5rem; /* Space below title */
+}
+
+.project-description {
+  font-size: 1rem; /* Description size */
+  margin: 0.5rem 0; /* Space around description */
+}
+
+.project-technologies {
+  font-size: 0.9rem; /* Technologies size */
+  color: #b0b0b0; /* Color for technologies */
+}
+
+.project-link {
+  display: inline-block; /* Make it a block element */
+  margin-top: 1rem; /* Space above link */
+  padding: 0.5rem 1rem; /* Padding for the link */
+  background-color: #a31619; /* Link background color */
+  color: white; /* Link text color */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+.project-link:hover {
+  background-color: #8c1416; /* Darker shade on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .project-header {
+    font-size: 2.5rem; /* Smaller header on mobile */
+  }
+
+  .project-title {
+    font-size: 1.25rem; /* Smaller title on mobile */
+  }
+
+  .project-description {
+    font-size: 0.9rem; /* Smaller description on mobile */
+  }
+
+  .project-technologies {
+    font-size: 0.8rem; /* Smaller tech size on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-header {
+    font-size: 2rem; /* Even smaller header on smaller devices */
+  }
+
+  .project-title {
+    font-size: 1rem; /* Even smaller title on smaller devices */
+  }
+
+  .project-card {
+    padding: 1rem; /* Smaller padding on mobile */
+  }
+
+  .project-link {
+    padding: 0.4rem 0.8rem; /* Smaller padding for links on mobile */
+  }
+}
