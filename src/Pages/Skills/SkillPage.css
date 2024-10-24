@@ -1,40 +1,52 @@
 .skill-page {
-    padding: 1rem; /* Reduce padding */
-    background-color: #4aff1d; /* Background color */
-    color: #eaeaea; /* Text color */
-    text-align: center; /* Center text */
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    font-family: 'Orbitron', sans-serif; /* Set font family */
-    height: 100%; /* Ensure the page is at least full height */
-    overflow: hidden; /* Hide overflow to prevent scrolling */
+    color: #eaeaea;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
     width: 100%;
-    padding: 0 5%;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    z-index: 100000;
+}
+
+.skill-page-container {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .skill-header {
-    font-size: 2rem; /* Adjusted header size */
-    margin-bottom: 1rem; /* Space below header */
+    font-size: 7.8rem;
+    margin-bottom: 2rem;
 }
 
 .skill-container {
-    display: grid; /* Use grid layout for the skill container */
-    grid-template-columns: repeat(3, 1fr); /* 2 columns */
-    grid-gap: 0.5rem; /* Gap between items */
-    max-width: 1000px; /* Limit maximum width of the container */
-    width: 100%; /* Full width */
-    flex-grow: 1; /* Allow the container to grow */
-    overflow-y: auto; /* Allow vertical scroll only if needed */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    grid-gap: 3rem;
+    max-width: fit-content;
+    width: 100%;
+    flex-grow: 1;
+    margin: 0 auto;
+    margin-top: -10vh;
 }
 
-/* Skill Category Styles */
 .skill-category {
-    background-color: #1e1e1e; /* Card background color */
-    padding: 0.5rem; /* Inner padding */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
-    text-align: left; /* Align text to the left */
+    background-color: #0f0f0f;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 20vw;
+}
+
+.skill-category h2 {
+    text-align: center;
+    color: var(--highlight-color);
 }
 
 .skill-grid {
@@ -42,74 +54,101 @@
     flex-direction: column;
 }
 
-/* Skill Card Styles */
 .skill-card {
-    background-color: #2b2b2b; /* Card background color */
-    padding: 0.5rem; /* Inner padding */
-    border-radius: 5px; /* Rounded corners */
-    margin: 0.25rem 0; /* Margin between cards */
+    background-color: #2b2b2b;
+    padding: 0.5rem;
+    border-radius: 2px;
+    margin: 0.50rem 1rem;
 }
 
 .skill-name {
-    font-size: 1rem; /* Adjusted skill name size */
-    margin-bottom: 0.25rem; /* Space below skill name */
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
 }
 
 .skill-bar {
-    background-color: #333; /* Background for skill bar */
-    border-radius: 5px; /* Rounded corners for bar */
-    height: 10px; /* Adjusted height of the skill bar */
-    overflow: hidden; /* Hide overflow */
+    background-color: #333;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
 }
 
 .skill-progress {
-    background-color: #0ff1ce; /* Progress color */
-    height: 100%; /* Full height */
-    transition: width 0.5s ease-in-out; /* Smooth width transition */
+    background-color: #0ff1ce;
+    height: 100%;
+    transition: width 0.5s ease-in-out;
 }
 
 .skill-level {
-    font-size: 0.8rem; /* Adjusted level percentage size */
-    margin-top: 0.25rem; /* Space above level text */
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1341px) {
+    .skill-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 projects per row */
+      overflow-y: auto;
+      max-width: fit-content;
+      width: 100%;
+      height: fit-content;
+    }
+
+    .skill-page {
+        color: #eaeaea;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        font-family: 'Orbitron', sans-serif;
+        overflow: hidden;
+        border: 1px solid yellow;
+        z-index: 100000;
+    }
+    
+  }
+
+/* Responsive for tablet screens */
+@media (max-width: 800px) {
     .skill-header {
-        font-size: 1.75rem; /* Smaller header on mobile */
-    }
-
-    .skill-name {
-        font-size: 0.9rem; /* Smaller skill name on mobile */
-    }
-
-    .skill-level {
-        font-size: 0.7rem; /* Smaller level percentage on mobile */
+        font-size: 4rem; /* Adjusted header font size for tablets */
     }
 
     .skill-container {
-        grid-template-columns: 1fr; /* One column on mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .skill-header {
-        font-size: 1.5rem; /* Even smaller header on smaller devices */
-    }
-
-    .skill-card {
-        padding: 0.3rem; /* Smaller padding on mobile */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        overflow-y: auto;
     }
 
     .skill-name {
-        font-size: 0.8rem; /* Even smaller skill name on smaller devices */
+        font-size: 0.9rem;
     }
 
     .skill-level {
-        font-size: 0.6rem; /* Even smaller level percentage on smaller devices */
+        font-size: 0.7rem;
+    }
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 480px) {
+    .skill-header {
+        font-size: 1.5rem;
+    }
+
+    .skill-card {
+        padding: 0.3rem;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
+
+    .skill-level {
+        font-size: 0.6rem;
     }
 
     .skill-bar {
-        height: 8px; /* Reduced height of the skill bar on smaller devices */
+        height: 8px;
     }
 }

@@ -1,13 +1,13 @@
 :root {
-  --background-color: #212529;
-  --primary-color: #00d1e6;
-  --secondary-color: #ff4081;
-  --highlight-color: #db3300;
-  --text-color: #f8f9fa;
-  --text-highlight-color: #adb5bd;
-  --accent-color: #3f51b5;
-  --font-family-main: "Orbitron", sans-serif;
-  --font-family-code: "VT323", monospace;
+  --background-color: #000000; /* Dark background */
+  --primary-color: #1E1E1E; /* Surface color */
+  --secondary-color: #EAEAEA; /* Primary text color */
+  --highlight-color: #AB1818; /* Accent color */
+  --text-color: #EAEAEA; /* Text color */
+  --text-highlight-color: #B0B0B0; /* Secondary text color */
+  --accent-color: #FF4E00; /* Link color */
+  --font-family-main: "Orbitron", sans-serif; /* Main font */
+  --font-family-code: "VT323", monospace; /* Code font */
 }
 
 body {

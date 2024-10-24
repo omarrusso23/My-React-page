@@ -1,74 +1,119 @@
-/* Full-screen sections with scroll snapping */
-.App > div {
-    height: 100vh; /* Full height of the viewport */
+body {
+    scroll-snap-type: y mandatory;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+}
+
+.section {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    scroll-snap-align: start; /* Snap at the start of the section */
-    scroll-snap-stop: always; /* Ensure it snaps completely */
-}
-
-/* Individual sections */
-.section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
-/* Scroll snap behavior */
-body {
-    margin: 0;
-    scroll-snap-type: y proximity; /* Switch to proximity for smoother snapping */
-    scroll-behavior: smooth;
-}
-
-/* Sidebar Navigation with Glassmorphism */
-.sidebar {
+.navbar {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 90px;
-    height: 100vh; /* Full height of the viewport */
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Blur effect */
-    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    padding-top: 20px;
-    z-index: 1000; /* Make sure it's above everything */
+    left: 0;
+    width: 100%;
+    height: 80px;
+    backdrop-filter: blur(20px);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
+    z-index: 1000000;
+    margin-right: 30px;
+    background-color: #00000088;
 }
 
-/* Sidebar links */
-.sidebar ul {
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust height of the fade effect */
+    background: linear-gradient(to right, transparent 60%, white); /* Fade effect from right to left */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.navList ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    padding: 30px;
     margin: 0;
 }
 
-.sidebar li {
-    margin: 20px 0;
+.navList li {
+    margin-left: 20px;
     cursor: pointer;
-    color: white; /* Text color */
+    color: white;
     font-size: 18px;
     transition: color 0.3s ease;
-    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
 }
 
-.sidebar li:hover {
-    color: #ff4e00; /* Highlight color on hover */
+.navList li:hover {
+    color: var(--highlight-color);
 }
 
-/* Ensure body has no margin and overflow settings */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+
+.App {
+    margin-top: 0px;
+    overflow-y: hidden;
+}
+
+.text-highlight{
+    color: var(--accent-color);
+}
+
+@media (max-width: 480px) {
+    .App{
+        overflow-x: hidden;
+    }
+
+    .navList li {
+        font-size: 14px;
+        margin-left: 0px;
+    }
+
+    .navbar::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px; /* Adjust height of the fade effect */
+        background: linear-gradient(to right, transparent, white); /* Fade effect from right to left */
+        pointer-events: none; /* Allow clicks to pass through */
+    }
+    
+}
+
+.custom-shape-divider-bottom-1729773955 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1729773955 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 442px;
+}
+
+.custom-shape-divider-bottom-1729773955 .shape-fill {
+    fill: #410505;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProjectPage.css"; // Your CSS file for styles
+import { Typewriter } from "../../Animations/Typewriter";
 
 const projects = [
   {
@@ -46,11 +47,13 @@ const ProjectCard = ({ project }) => (
 const ProjectPage = () => {
   return (
     <div className="project-page">
-      <h1 className="project-header">My Projects</h1>
-      <div className="project-grid">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+      <div className="project-container">
+        <h1 className="project-header"><Typewriter text="PROJECTS" speed={200}></Typewriter></h1>
+        <div className="project-grid">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,19 +1,31 @@
 import React from "react";
+import { Typewriter } from "../../Animations/Typewriter"; // Adjust the import path as needed
 import "./LandingPage.css"; // Your CSS file for styles
-import profileImage from "../../Assets/Foto CV.jpeg"; // Import your image
+import profileImage from "../../Assets/Foto CV B&G.png"; // Import your image
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
       <div className="text-container">
-        <h1 className="landing-title">Junior Fullstack Developer</h1>
-        <h2 className="landing-subtitle">Hi, I'm Omar Russo Castillo</h2>
+        <h1 className="landing-title">
+          <Typewriter text="JUNIOR FULLSTACK DEVELOPER" speed={200} />
+        </h1>
+        <h2 className="landing-subtitle">
+          <span className="text-highlight">Hey there</span>, I'm Omar!
+        </h2>
         <p className="description">
-          Passionate about building modern web applications using React, Redux, and .NET.
+          I love learning and pushing boundaries to create the best web
+          applications and sites I can. With React, Redux, and a dash of .NET,
+          I'm always ready to take on new challenges and build something
+          amazing!
         </p>
       </div>
       <div className="image-container">
-        <img src={profileImage} alt="Omar Russo Castillo" className="profile-image" />
+        <img
+          src={profileImage}
+          alt="Omar Russo Castillo"
+          className="profile-image"
+        />
       </div>
     </div>
   );

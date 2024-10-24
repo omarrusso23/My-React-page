@@ -1,24 +1,22 @@
 import React from "react";
-import "./EndingPage.css"; // Your CSS file for styles
+import { Typewriter } from "../../Animations/Typewriter";
+import "./EndingPage.css";
 
 const EndingPage = () => {
   return (
     <div className="ending-page">
-      <h1 className="ending-header">Thank You!</h1>
+      <h1 className="ending-header">
+        <Typewriter text={"Thanks for stopping by!"} speed={200} />
+        <span className="waving-emoji">👋</span>
+      </h1>
       <p className="ending-message">
-        Thank you for visiting my portfolio. I hope you found it informative
-        and inspiring. If you have any questions or would like to get in touch,
-        feel free to reach out!
+        Thanks a bunch for swinging by my portfolio! I hope you found it useful
+        and maybe even a tad inspiring. Got questions? Want to brainstorm ideas?
+        Or just fancy a chat? I’m all ears—don’t be shy, let’s connect!
       </p>
       <div className="ending-links">
-        <a href="mailto:your-email@example.com" className="ending-link">
-          Contact Me
-        </a>
-        <a href="/projects" className="ending-link">
-          View Projects
-        </a>
-        <a href="/skills" className="ending-link">
-          My Skills
+        <a href="mailto:omar.russo23@gmail.com" className="ending-link">
+          Let’s Connect
         </a>
       </div>
     </div>
