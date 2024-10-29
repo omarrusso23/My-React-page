@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter } from "../../Animations/Typewriter";
+import CV from "../../Assets/CV english 2.pdf";
 import "./EndingPage.css";
 
 const EndingPage = () => {
@@ -15,15 +16,27 @@ const EndingPage = () => {
         Or just fancy a chat? I’m all ears—don’t be shy, let’s connect!
       </p>
       <div className="ending-links">
+        {/* Download CV Button */}
+        <a href={CV} className="ending-link download-cv" download>
+          Download CV
+        </a>
         <a href="mailto:omar.russo23@gmail.com" className="ending-link">
           Let’s Connect
         </a>
-        <a href="https://www.linkedin.com/in/omar-russo-castillo-421680145/" 
-           className="ending-link" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/omar-russo-castillo-421680145/"
+          className="ending-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           LinkedIn
         </a>
-        <a href="https://github.com/omarrusso23" 
-           className="ending-link" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/omarrusso23"
+          className="ending-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>
       </div>

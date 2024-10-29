@@ -19,6 +19,7 @@
 .experience-header {
   font-size: 7.8rem;
   margin-bottom: 2rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .experience-timeline {
@@ -42,13 +43,11 @@
 }
 
 .timeline-content {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--primary-color);
   border-radius: 15px;
-  border: 1px solid white;
-  padding: 15px;
+  padding: 20px;
   width: calc(100% - 50px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.541);
 }
 
 .timeline-content h3 {
@@ -62,17 +61,17 @@
 /* Responsive Styles */
 
 /* Medium screens (tablets, under 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .experience-header {
     font-size: 5rem;
   }
   
   .experience-timeline {
-    width: 70%;
+    width: 85%;
   }
   
   .timeline-content {
-    padding: 12px;
+    padding: 20px;
   }
 }
 
@@ -93,7 +92,7 @@
 
   .timeline-content {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
   }
 }
 
@@ -112,7 +111,7 @@
   }
 
   .timeline-content {
-    padding: 10px;
+    padding: 16px;
     font-size: 1rem; 
   }
 

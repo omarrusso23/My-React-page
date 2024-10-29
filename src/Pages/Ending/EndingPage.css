@@ -31,6 +31,15 @@
   flex-wrap: wrap; /* Wrap links on smaller screens */
 }
 
+/* New Media Query for Reordering Buttons on Mobile */
+@media (max-width: 768px) {
+  .ending-links {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;    /* Center buttons */
+    gap: 1rem;              /* Adjust gap between buttons */
+  }
+}
+
 .ending-link {
   padding: 1rem 1rem;
   background-color: #a31619;
@@ -88,6 +97,7 @@
 @media (max-width: 1400px) {
   .ending-header {
     font-size: 5rem;
+    margin: 1rem;
   }
   .ending-message {
     font-size: 1.5rem;
@@ -112,7 +122,7 @@
 
 /* Extra small screens (under 480px) */
 @media (max-width: 480px) {
-  .ending-page{
+  .ending-page {
     height: fit-content;
     margin-bottom: 80%;
   }
@@ -123,9 +133,19 @@
     font-size: 1rem;
     width: 90%;
   }
-  .ending-link {
-    padding: 0.4rem 0.8rem;
+  .ending-links {
+    width: 50%;
+    display: flex; /* Use flexbox to manage button layout */
+    flex-direction: column; /* Stack buttons vertically */
+    flex-wrap: nowrap;
   }
+  
+  .ending-link {
+    padding: 1rem 1rem;
+    width: 100%; /* Set width to 100% to take the full width of the parent */
+    text-align: center; /* Center text within the buttons */
+  }
+  
   .waving-emoji {
     display: none;
   }
