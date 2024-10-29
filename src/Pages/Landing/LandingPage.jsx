@@ -11,7 +11,7 @@ const LandingPage = () => {
           <Typewriter text="JUNIOR FULLSTACK DEVELOPER" speed={200} />
         </h1>
         <h2 className="landing-subtitle">
-          <span className="text-highlight">Hey there</span>, I'm Omar!
+          <span className="text-highlight">Hey there, I'm Omar!</span>
         </h2>
         <p className="description">
           I love learning and pushing boundaries to create the best web

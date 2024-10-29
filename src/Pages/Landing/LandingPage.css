@@ -44,7 +44,7 @@ h1 {
   max-width: 480px; /* Set a maximum width */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for image */
+  backdrop-filter: blur(1px);
 }
 
 /* General styles */
@@ -55,8 +55,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%; /* Use full width */
-  max-width: 1300px; /* Set a maximum width */
+  width: 1250px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .landing-subtitle {
@@ -67,7 +67,7 @@ h1 {
 
 .description {
   font-size: 1.2rem; 
-  max-width: 600px; 
+  max-width: 1250px; 
   margin: 1rem 0; 
   font-weight: 400;
 }
@@ -97,8 +97,8 @@ h1 {
 
   .landing-page {
     flex-direction: column; 
-    align-items: center; 
-    padding: 2rem; 
+    align-items: center;
+    height: fit-content;
   }
 
   .landing-title {
@@ -109,19 +109,20 @@ h1 {
   }
 
   .text-container {
-    text-align: center; 
+    text-align: center;
+    margin-top: 20%;
   }
 
   .description {
     font-size: 1.2rem; 
-    max-width: 80%; /* Make text span across more width on tablets */
-    margin: 0 auto; /* Center the description */
+    max-width: 80%;
+    margin: 0 auto;
     font-weight: 400;
   }
 }
 
 /* Hide image on tablet screens */
-@media (max-width: 1400px) and (min-width: 650px) {
+@media (max-width: 1775px) and (min-width: 650px) {
   .image-container {
     display: none; 
   }

@@ -18,6 +18,14 @@ const EndingPage = () => {
         <a href="mailto:omar.russo23@gmail.com" className="ending-link">
           Let’s Connect
         </a>
+        <a href="https://www.linkedin.com/in/omar-russo-castillo-421680145/" 
+           className="ending-link" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a href="https://github.com/omarrusso23" 
+           className="ending-link" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: fit-content;
   max-height: fit-content;
   width: 100%;
   z-index: 100000;
@@ -23,31 +23,32 @@
 
 .experience-timeline {
   width: 50%;
-  margin-left: 25%;
+  margin: 0 auto;
   position: relative;
   overflow-y: auto;
   text-align: left;
   margin-bottom: 40px;
-  height: 58%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add your desired shadow here */
+
 }
 
+/* Timeline items */
 .timeline-item {
   display: flex;
   align-items: flex-start;
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
   position: relative;
-  backdrop-filter: blur(10px);
-  border: 1px solid white;
   border-radius: 5px;
 }
 
 .timeline-content {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border-radius: 15px;
+  border: 1px solid white;
   padding: 15px;
-  width: calc(100% - 50px); /* Account for circle and margin */
+  width: calc(100% - 50px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .timeline-content h3 {
@@ -55,5 +56,68 @@
 }
 
 .timeline-content ul {
-  padding-left: 20px; /* Indentation for list */
+  padding-left: 20px;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets, under 1024px) */
+@media (max-width: 1024px) {
+  .experience-header {
+    font-size: 5rem;
+  }
+  
+  .experience-timeline {
+    width: 70%;
+  }
+  
+  .timeline-content {
+    padding: 12px;
+  }
+}
+
+/* Small screens (mobile, under 768px) */
+@media (max-width: 768px) {
+  .experience-header {
+    font-size: 3.5rem;
+  }
+  
+  .experience-timeline {
+    width: 90%;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Extra small screens (mobile under 480px) */
+@media (max-width: 480px) {
+  .experience-header {
+    font-size: 2.5rem;
+  }
+
+  .experience-timeline {
+    width:90%;
+  }
+
+  .timeline-content{
+    width: 90%;
+  }
+
+  .timeline-content {
+    padding: 10px;
+    font-size: 1rem; 
+  }
+
+  .experience-page{
+    margin-top: 15%;
+    height: fit-content;
+  }
 }

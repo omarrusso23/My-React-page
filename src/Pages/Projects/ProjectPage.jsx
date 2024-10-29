@@ -8,14 +8,14 @@ const projects = [
     title: "Project One",
     description: "This is a brief description of Project One.",
     technologies: "React, Node.js, MongoDB",
-    link: "#", // Replace with actual link
+    link: "https://code-snippet-sharing-web.vercel.app/",
   },
   {
     id: 2,
     title: "Project Two",
     description: "This is a brief description of Project Two.",
     technologies: "HTML, CSS, JavaScript",
-    link: "#", // Replace with actual link
+    link: "https://omarrusso23.github.io/React-ToDo-List/",
   },
   {
     id: 3,

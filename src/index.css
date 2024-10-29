@@ -1,14 +1,11 @@
 :root {
-  --background-color: #000000; /* Dark background */
-  --primary-color: #1E1E1E; /* Surface color */
-  --secondary-color: #EAEAEA; /* Primary text color */
-  --highlight-color: #AB1818; /* Accent color */
-  --text-color: #EAEAEA; /* Text color */
-  --text-highlight-color: #B0B0B0; /* Secondary text color */
-  --accent-color: #FF4E00; /* Link color */
-  --font-family-main: "Orbitron", sans-serif; /* Main font */
-  --font-family-code: "VT323", monospace; /* Code font */
+  --background-color: #121212; /* Dark background for a softer look */
+  --primary-color: #1E1E1E; /* Surface color for cards and sections */
+  --secondary-color: #E0E0E0; /* Primary text color, slightly softer */
+  --highlight-color: #FF4C00; /* Accent color for highlights */
+  --text-color: #FFFFFF; /* Main text color for high contrast */
 }
+
 
 body {
   margin: 0;

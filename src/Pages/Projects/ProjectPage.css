@@ -24,16 +24,20 @@ body {
 .project-header {
   font-size: 7.8rem;
   margin-bottom: 2rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default for larger screens */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   justify-content: center;
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
+  min-height: 20rem;
 }
+
 
 /* Responsive for screens under 1241px */
 @media (max-width: 1241px) {
@@ -86,34 +90,40 @@ body {
 /* Responsive for mobile screens */
 @media (max-width: 480px) {
   .project-header {
-    font-size: 2.5rem; /* Further reduce header font size for mobile */
+    font-size: 2.5rem;
   }
 
   .project-card {
-    padding: 1rem; /* Reduce padding for smaller devices */
+    padding: 1rem;
   }
 
   .project-title {
-    font-size: 1.2rem; /* Smaller project title */
+    font-size: 1.2rem;
   }
 
   .project-description {
-    font-size: 0.9rem; /* Smaller description */
+    font-size: 0.9rem;
   }
 
   .project-technologies {
-    font-size: 0.75rem; /* Smaller technologies text */
+    font-size: 0.75rem;
   }
 
   .project-link {
-    padding: 0.4rem 0.8rem; /* Adjust button padding */
-    font-size: 0.9rem; /* Adjust button font size */
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
   }
+
+  .project-page {
+    margin-top: 19%;
+    height: fit-content;
+  }
+  
 }
 
 .project-card {
-  background-color: #1e1e1e;
-  padding: 1.5rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
