@@ -1,0 +1,132 @@
+.ending-page {
+  color: #eaeaea;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  z-index: 100000;
+}
+
+.ending-header {
+  font-size: 7.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.ending-message {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  width: 80%;
+}
+
+.ending-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; /* Wrap links on smaller screens */
+}
+
+.ending-link {
+  padding: 1rem 1rem;
+  background-color: #a31619;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-size: 1.2rem;
+}
+
+.ending-link:hover {
+  background-color: #c4181b;
+  box-shadow: 0 0 10px 4px rgba(209, 27, 30, 0.6); /* Glow effect */
+}
+
+/* LinkedIn button glow */
+.ending-link[href*="linkedin"]:hover {
+  background-color: #005582;
+  box-shadow: 0 0 10px 4px rgba(0, 85, 130, 0.6); /* LinkedIn blue glow */
+}
+
+/* GitHub button glow */
+.ending-link[href*="github"]:hover {
+  background-color: #24292e;
+  box-shadow: 0 0 10px 4px rgba(36, 41, 46, 0.6); /* GitHub dark glow */
+}
+
+.waving-emoji {
+  display: inline-block;
+  animation: wave 1s infinite ease-in-out;
+  font-size: 7.8rem;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0) rotate(20deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 1650px) {
+  .waving-emoji {
+    display: none;
+  }
+}
+
+/* Medium screens (tablets, under 1400px) */
+@media (max-width: 1400px) {
+  .ending-header {
+    font-size: 5rem;
+  }
+  .ending-message {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small screens (under 768px) */
+@media (max-width: 768px) {
+  .ending-header {
+    font-size: 3.5rem;
+  }
+  .ending-message {
+    font-size: 1.2rem;
+  }
+  .ending-links {
+    gap: 1.5rem; /* Reduce gap on mobile */
+  }
+  .waving-emoji {
+    display: none;
+  }
+}
+
+/* Extra small screens (under 480px) */
+@media (max-width: 480px) {
+  .ending-page{
+    height: fit-content;
+    margin-bottom: 80%;
+  }
+  .ending-header {
+    font-size: 2.5rem;
+  }
+  .ending-message {
+    font-size: 1rem;
+    width: 90%;
+  }
+  .ending-link {
+    padding: 0.4rem 0.8rem;
+  }
+  .waving-emoji {
+    display: none;
+  }
+}
