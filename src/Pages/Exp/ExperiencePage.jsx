@@ -68,7 +68,7 @@ const ExperiencePage = () => {
           {experiences.map((exp, index) => (
             <div className="timeline-item" key={index}>
               <div className="timeline-content">
-                <h3>{exp.title}</h3>
+                <h3><span className="text-highlight">{exp.title}</span></h3>
                 <h4>{exp.company}</h4>
                 <p>{exp.duration}</p>
                 <p>{exp.location}</p>

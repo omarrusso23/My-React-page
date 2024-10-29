@@ -51,6 +51,12 @@ body {
   .project-grid {
     grid-template-columns: 1fr; /* 1 project per row */
   }
+
+  .project-card {
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+  }
+
 }
 
 /* Responsive for tablet screens */
@@ -122,12 +128,37 @@ body {
 }
 
 .project-card {
-  background-color: var(--primary-color);
+  position: relative; /* Required to position the pseudo-element */
+  background-color: var(--primary-color); /* Fallback color */
+  background-size: cover; /* Ensures the image covers the card */
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px #0000008c;
   transition: transform 0.2s;
+  overflow: hidden; /* Prevents overflow of child elements */
 }
+
+.project-card::before {
+  content: "";
+  position: absolute; /* Positioning the overlay */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit; /* Inherit the background image from the parent */
+  background-size: cover;
+  filter: blur(3px) brightness(0.5); /* Adjust the blur amount as needed */
+  z-index: 1; /* Place this behind the text content */
+}
+
+.project-title,
+.project-description,
+.project-technologies,
+.project-link {
+  position: relative; 
+  z-index: 2;
+}
+
 
 .project-card:hover {
   transform: scale(1.05);
@@ -141,6 +172,8 @@ body {
 .project-description {
   font-size: 1rem;
   margin: 0.5rem 0;
+  min-height: 100px;
+  font-weight: bolder;
 }
 
 .project-technologies {

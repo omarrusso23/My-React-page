@@ -1,8 +1,8 @@
 :root {
-  --background-color: #121212; /* Dark background for a softer look */
+  --background-color: #111111; /* Dark background for a softer look */
   --primary-color: #1E1E1E; /* Surface color for cards and sections */
   --secondary-color: #E0E0E0; /* Primary text color, slightly softer */
-  --highlight-color: #FF4C00; /* Accent color for highlights */
+  --highlight-color: #b92e30; /* Accent color for highlights */
   --text-color: #FFFFFF; /* Main text color for high contrast */
 }
 
