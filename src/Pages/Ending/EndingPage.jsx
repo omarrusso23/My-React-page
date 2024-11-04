@@ -16,7 +16,6 @@ const EndingPage = () => {
         Or just fancy a chat? I’m all ears—don’t be shy, let’s connect!
       </p>
       <div className="ending-links">
-        {/* Download CV Button */}
         <a href={CV} className="ending-link download-cv" download>
           Download CV
         </a>
