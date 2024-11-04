@@ -28,15 +28,14 @@
 .ending-links {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap; /* Wrap links on smaller screens */
+  flex-wrap: wrap;
 }
 
-/* New Media Query for Reordering Buttons on Mobile */
 @media (max-width: 768px) {
   .ending-links {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;    /* Center buttons */
-    gap: 1rem;              /* Adjust gap between buttons */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -52,19 +51,17 @@
 
 .ending-link:hover {
   background-color: #c4181b;
-  box-shadow: 0 0 10px 4px rgba(209, 27, 30, 0.6); /* Glow effect */
+  box-shadow: 0 0 10px 4px rgba(209, 27, 30, 0.6);
 }
 
-/* LinkedIn button glow */
 .ending-link[href*="linkedin"]:hover {
   background-color: #005582;
-  box-shadow: 0 0 10px 4px rgba(0, 85, 130, 0.6); /* LinkedIn blue glow */
+  box-shadow: 0 0 10px 4px rgba(0, 85, 130, 0.6);
 }
 
-/* GitHub button glow */
 .ending-link[href*="github"]:hover {
   background-color: #24292e;
-  box-shadow: 0 0 10px 4px rgba(36, 41, 46, 0.6); /* GitHub dark glow */
+  box-shadow: 0 0 10px 4px rgba(36, 41, 46, 0.6);
 }
 
 .waving-emoji {
@@ -85,15 +82,12 @@
   }
 }
 
-/* Responsive adjustments */
-
 @media (max-width: 1650px) {
   .waving-emoji {
     display: none;
   }
 }
 
-/* Medium screens (tablets, under 1400px) */
 @media (max-width: 1400px) {
   .ending-header {
     font-size: 5rem;
@@ -104,7 +98,6 @@
   }
 }
 
-/* Small screens (under 768px) */
 @media (max-width: 768px) {
   .ending-header {
     font-size: 3.5rem;
@@ -113,14 +106,13 @@
     font-size: 1.2rem;
   }
   .ending-links {
-    gap: 1.5rem; /* Reduce gap on mobile */
+    gap: 1.5rem;
   }
   .waving-emoji {
     display: none;
   }
 }
 
-/* Extra small screens (under 480px) */
 @media (max-width: 480px) {
   .ending-page {
     height: fit-content;
@@ -135,18 +127,17 @@
   }
   .ending-links {
     width: 50%;
-    display: flex; /* Use flexbox to manage button layout */
-    flex-direction: column; /* Stack buttons vertically */
+    display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
   }
-  
   .ending-link {
     padding: 1rem 1rem;
-    width: 100%; /* Set width to 100% to take the full width of the parent */
-    text-align: center; /* Center text within the buttons */
+    width: 100%;
+    text-align: center;
   }
-  
   .waving-emoji {
     display: none;
   }
 }
+  

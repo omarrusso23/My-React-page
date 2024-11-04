@@ -32,7 +32,6 @@
 
 }
 
-/* Timeline items */
 .timeline-item {
   display: flex;
   align-items: flex-start;
@@ -58,9 +57,6 @@
   padding-left: 20px;
 }
 
-/* Responsive Styles */
-
-/* Medium screens (tablets, under 1024px) */
 @media (max-width: 1400px) {
   .experience-header {
     font-size: 5rem;
@@ -75,7 +71,6 @@
   }
 }
 
-/* Small screens (mobile, under 768px) */
 @media (max-width: 768px) {
   .experience-header {
     font-size: 3.5rem;
@@ -96,7 +91,6 @@
   }
 }
 
-/* Extra small screens (mobile under 480px) */
 @media (max-width: 480px) {
   .experience-header {
     font-size: 2.5rem;

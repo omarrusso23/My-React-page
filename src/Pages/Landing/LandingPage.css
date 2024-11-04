@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body {
-  font-family: 'Inter', sans-serif; /* Apply the new font globally */
-  margin: 0; /* Remove default margin */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
 }
 
 .landing-page {
@@ -13,10 +13,10 @@ body {
   height: 100vh; 
   color: #eaeaea; 
   text-align: left; 
-  padding: 0 5%; /* More padding for larger screens */
+  padding: 0 5%;
   width: 100%;
   z-index: 100000;
-  box-sizing: border-box; /* Include padding in width calculations */
+  box-sizing: border-box;
 }
 
 .text-container {
@@ -40,14 +40,13 @@ h1 {
 }
 
 .profile-image {
-  width: 100%; /* Make the image responsive */
-  max-width: 480px; /* Set a maximum width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  max-width: 480px;
+  height: auto;
   object-fit: cover; 
   backdrop-filter: blur(1px);
 }
 
-/* General styles */
 .landing-title {
   font-size: 7.8rem;
   font-weight: 700;
@@ -81,15 +80,14 @@ h1 {
   text-decoration: none; 
   border-radius: 5px; 
   transition: background-color 0.3s, transform 0.3s; 
-  font-weight: 500; /* Medium weight */
+  font-weight: 500;
 }
 
 .cta-button:hover {
-  background-color: #8c1416; /* Darker shade on hover */
+  background-color: #8c1416;
   transform: scale(1.05); 
 }
 
-/* Responsive adjustments for mobile screens */
 @media (max-width: 650px) {
   .image-container {
     display: none; 
@@ -121,7 +119,6 @@ h1 {
   }
 }
 
-/* Hide image on tablet screens */
 @media (max-width: 1775px) and (min-width: 650px) {
   .image-container {
     display: none; 
@@ -134,7 +131,7 @@ h1 {
   }
 
   .landing-title {
-    font-size: 7rem; /* Reduce font size for tablet */
+    font-size: 7rem;
     font-weight: 700;
     width: 100%;
     max-width: 97%;
@@ -145,13 +142,13 @@ h1 {
   }
 
   .profile-image {
-    height: 80%; /* Adjust profile image height */
+    height: 80%;
   }
 
   .description {
     font-size: 1.2rem; 
-    max-width: 80%; /* Make text span across more width on tablets */
-    margin: 0 auto; /* Center the description */
+    max-width: 80%;
+    margin: 0 auto;
     font-weight: 400;
   }
 }

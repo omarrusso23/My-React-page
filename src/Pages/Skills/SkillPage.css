@@ -27,9 +27,9 @@
 
 .skill-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
-    width: 100%; /* Ensure full width */
+    width: 100%;
     margin: 0 auto;
     margin-top: -10vh;
     justify-items: center;
@@ -83,28 +83,26 @@
     margin-top: 0.25rem;
 }
 
-/* Responsive for screens under 1341px */
 @media (max-width: 1341px) {
     .skill-container {
-        grid-template-columns: repeat(2, 0.5fr); /* 2 columns for smaller screens */
-        overflow: hidden; /* Prevent overflow issues */
-        width: 100%; /* Use full width */
-        height: auto; /* Allow the container to grow with its content */
+        grid-template-columns: repeat(2, 0.5fr);
+        overflow: hidden;
+        width: 100%;
+        height: auto;
     }
 
     .skill-category {
-        width: 100%; /* Ensure categories take full width */
+        width: 100%;
     }
 }
 
-/* Responsive for tablet screens */
 @media (max-width: 800px) {
     .skill-header {
-        font-size: 4rem; /* Adjusted header font size for tablets */
+        font-size: 4rem;
     }
 
     .skill-container {
-        grid-template-columns: 1fr; /* Single column layout for tablets */
+        grid-template-columns: 1fr;
         gap: 1rem;
         overflow-y: auto;
     }
@@ -118,7 +116,6 @@
     }
 }
 
-/* Responsive for mobile screens */
 @media (max-width: 480px) {
     .skill-header {
         font-size: 2.5rem;
@@ -147,7 +144,7 @@
     }
 
     .skill-category {
-        width: 90%; /* Adjust if necessary */
+        width: 90%;
         margin-left: 2.5%;
     }
 }
