@@ -1,6 +1,6 @@
 import React from "react";
 import { Typewriter } from "../../Animations/Typewriter";
-import CV from "../../Assets/CV english 2.pdf";
+import CV from "../../Assets/Omar's CV.pdf";
 import "./EndingPage.css";
 
 const EndingPage = () => {
