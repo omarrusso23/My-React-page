@@ -8,7 +8,7 @@ const LandingPage = () => {
     <div className="landing-page">
       <div className="text-container">
         <h1 className="landing-title">
-          <Typewriter text="JUNIOR FULLSTACK DEVELOPER" speed={200} />
+          <Typewriter text="FULLSTACK/FRONTEND DEVELOPER" speed={200} />
         </h1>
         <h2 className="landing-subtitle">
           <span className="text-highlight">Hey there, I'm Omar!</span>
